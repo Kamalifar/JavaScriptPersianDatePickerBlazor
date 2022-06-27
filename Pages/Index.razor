@@ -4,6 +4,8 @@
 <PageTitle>Index</PageTitle>
 
 <input type="text" id="pcal1" class="pdate" />
+<br/>
+selected date is : @selectedDate
 
 @*<input type="text" id="pcal2" class="pdate" />*@
 
@@ -22,5 +24,10 @@
         }
     }
 
-
+    static string selectedDate;
+    [JSInvokable]
+    public static void DateChanged(string pdate)
+    {
+        selectedDate = pdate;
+    }
 }

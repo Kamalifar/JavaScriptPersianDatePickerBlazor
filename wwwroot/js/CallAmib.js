@@ -1,7 +1,7 @@
-window.CallCall = (objCal1) => {
+window.CallAmib = (objCal1) => {
     new AMIB.persianCalendar(objCal1,{
-        onchange: function() {
-            DotNet.invokeMethodAsync('ShamsiDatePickerBlazor', 'DateChanged').then(
+        onchange: function (pdate) {
+            DotNet.invokeMethodAsync('ShamsiDatePickerBlazor', 'DateChanged', pdate.toString()).then(
                 (date) => {
                     console.log(data);
                 }
