@@ -1,0 +1,26 @@
+﻿@page "/"
+@inject IJSRuntime  JsRuntime
+
+<PageTitle>Index</PageTitle>
+
+<input type="text" id="pcal1" class="pdate" />
+
+@*<input type="text" id="pcal2" class="pdate" />*@
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        int dateFieldCount = 1;
+        if (firstRender)
+        {
+            for (int i = 1; i <= dateFieldCount; i++)
+            {
+                await JsRuntime.InvokeVoidAsync("CallAmib", "pcal" + i.ToString());
+            }
+
+        }
+    }
+
+
+}
