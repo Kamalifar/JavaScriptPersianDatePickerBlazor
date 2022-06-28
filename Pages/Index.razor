@@ -1,11 +1,13 @@
 ﻿@page "/"
-@inject IJSRuntime  JsRuntime
+@inject IJSRuntime JsRuntime
 
 <PageTitle>Index</PageTitle>
 
 <input type="text" id="pcal1" class="pdate" />
 <br/>
 selected date is : @selectedDate
+
+<input type="button" value="ShowNewValue" onclick="@(()=>showTest())"/>
 
 @*<input type="text" id="pcal2" class="pdate" />*@
 
@@ -24,7 +26,12 @@ selected date is : @selectedDate
         }
     }
 
-    static string selectedDate;
+    public void showTest()
+    {
+        
+    }
+
+    static string selectedDate="test";
     [JSInvokable]
     public static void DateChanged(string pdate)
     {

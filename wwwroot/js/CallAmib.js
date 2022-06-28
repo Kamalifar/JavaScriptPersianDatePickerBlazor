@@ -9,3 +9,16 @@ window.CallAmib = (objCal1) => {
         }
     });
 }
+
+//window.CallAmib = (objCal1) => {
+//    new AMIB.persianCalendar(objCal1, {
+//        onchange: function (pdate) {
+//            invokeDotnetInstanceFunction: function (addressProvider) {
+//                addressProvider.invokeMethodAsync("DateChanged").then((data) => {
+//                    console.log(data);
+//                });
+//            }
+//        }
+//    });
+//}
+
